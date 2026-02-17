@@ -1,178 +1,197 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xcolor}
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{fontawesome}
-\usepackage{tikz}
-\usepackage{array}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{ragged2e}
-\usepackage{parskip}
-\usepackage{setspace}
+\usepackage{fontawesome}
+\input{glyphtounicode}
 
-% Page setup
-\geometry{margin=0.75in}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{3pt}
-\setstretch{0.92}
 
-% Improve text wrapping and reduce underfull hbox warnings
-\sloppy
-\hyphenpenalty=1000
-\exhyphenpenalty=1000
-\tolerance=1000
-\emergencystretch=3em
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Custom colors
-\definecolor{primary}{RGB}{0,102,204}
-\definecolor{secondary}{RGB}{102,102,102}
-\definecolor{accent}{RGB}{239,68,68}
-\definecolor{lightgray}{RGB}{243,244,246}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-% Enhanced section formatting
-\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\vspace{1pt}\hrule height 0.5pt\vspace{2pt}]
-\titleformat{\subsection}{\normalsize\bfseries\color{primary}}{}{0em}{}
-\titleformat{\subsubsection}{\small\bfseries}{}{0em}{}
+\urlstyle{same}
 
-% Enhanced header with modern design
-\newcommand{\header}[3]{
-    \begin{center}
-        {\Huge\bfseries\color{primary} #1}\\[0.3em]
-        {\large\color{secondary} #2}\\[0.2em]
-        {\small #3}
-    \end{center}
-    \vspace{0.25em}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-% Contact info with icons and better styling
-\newcommand{\contact}[5]{
-    \begin{center}
-        \faEnvelope\ \href{mailto:#1}{#1} \quad
-        \faPhone\ \href{tel:#2}{#2} \quad
-        \faWhatsapp\ \href{https://wa.me/#3}{#3}
-    \end{center}
-    \begin{center}
-        \faLinkedin\ \href{https://#4}{#4} \quad
-        \faGithub\ \href{https://github.com/#5}{#5}
-    \end{center}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-% Enhanced experience item with modern styling
-\newcommand{\experience}[4]{
-    \subsection{#1}
-    \textbf{\color{primary}#2} \hfill \textit{\color{secondary}#3}\\[0.1em]
-    \raggedright
-    #4
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-% Enhanced education item
-\newcommand{\education}[3]{
-    \subsection{#1}
-    \textit{\color{secondary}#2}\\[0.1em]
-    #3
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-% Skills with modern layout
-\newcommand{\skills}[1]{
-    \subsection{Technical Skills}
-    #1
-}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-% Enhanced project item
-\newcommand{\project}[2]{
-    \subsection{#1}
-    #2
-}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-% Timeline item for better visual organization
-\newcommand{\timelineitem}[3]{
-    \begin{tabularx}{\textwidth}{@{}p{0.15\textwidth}@{\hspace{0.5em}}X@{}}
-        \small\color{secondary}#1 & \textbf{#2}\\[0.1em]
-        & \textit{\color{secondary}#3}
-    \end{tabularx}
-    \vspace{0.15em}
-}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-% Header
-\header{Ahmed Osama Ahmed Farouk}{Software Engineer}{}
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ahmed Osama Ahmed Farouk} \\ \vspace{1pt}
+    \small \faPhone\ 01552512723 $|$ \faWhatsapp\ \href{https://wa.me/01271898926}{01271898926} $|$ \href{mailto:ahmedosamaf98@gmail.com}{\underline{ahmedosamaf98@gmail.com}} $|$
+    \href{https://linkedin.com/in/ahmed98osama}{\underline{linkedin.com/in/ahmed98osama}} $|$
+    \href{https://github.com/ahmed98Osama}{\underline{github.com/ahmed98Osama}}
+\end{center}
 
-% Contact Information
-\contact{ahmedosamaf98@gmail.com}{01552512723}{01271898926}{linkedin.com/in/ahmed98osama}{ahmed98Osama}
 
-\vspace{0.25em}
-
-% Professional Summary
+%-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
-Experienced software engineer with expertise in full-stack development, machine learning, and artificial intelligence. Passionate about creating innovative solutions and contributing to cutting-edge technology projects. Strong background in Java, Spring Boot, Angular, and various AI/ML frameworks.
+  \small{Experienced software engineer with expertise in full-stack development, machine learning, and artificial intelligence. Passionate about creating innovative solutions and contributing to cutting-edge technology projects. Strong background in Java, Spring Boot, Angular, and various AI/ML frameworks.}
 
-% Technical Skills
-\section{Technical Skills}
-\begin{itemize}[leftmargin=*,itemsep=0.08em]
-    \item \textbf{Programming Languages:} Java 8/21, Python, JavaScript, TypeScript, SQL, C++
-    \item \textbf{Frameworks \& Libraries:} Spring Boot 2.5/3.3, Angular 18, React, Node.js, TensorFlow, PyTorch
-    \item \textbf{Databases:} MySQL, Oracle, SQL Server, PostgreSQL, MongoDB
-    \item \textbf{Spring Ecosystem:} Spring Data JPA, Spring Security, Spring Session, Spring Validation, Spring Actuator, Spring WebSocket
-    \item \textbf{Tools and Technologies:} Maven, Git, Docker, AWS, Linux, Power BI, Tableau, MapStruct, Lombok, Liquibase
-    \item \textbf{AI/ML:} PySpark, Web Scraping, Numpy, Sklearn, Pandas
-    \item \textbf{Web Technologies:} HTML, CSS, REST APIs, XML Schema, Encryption, Digital Signing
-\end{itemize}
 
-% Professional Experience
+%-----------EXPERIENCE-----------
 \section{Professional Experience}
+  \resumeSubHeadingListStart
 
-\experience{Software Engineer}{Data Gear}{2023 – Present}
-\begin{itemize}[leftmargin=*,itemsep=0.05em]
-    \item Collaborated in the development and enhancement of AML (Anti-Money Laundering) solutions with a focus on FATCA (Foreign Account Tax Compliance Act) and IRS (Internal Revenue Service) compliance
-    \item Worked closely with cross-functional teams, learning from compliance officers and financial analysts to understand the effective integration of eKYC, FATCA, and IRS solutions into the banking framework
-    \item Gained hands-on experience in full-stack development using Java, Spring Boot, Angular, and REST APIs
-\end{itemize}
+    \resumeSubheading
+      {Software Engineer}{2023 -- Present}
+      {Data Gear}{}
+      \resumeItemListStart
+        \resumeItem{Collaborated in the development and enhancement of AML (Anti-Money Laundering) solutions with a focus on FATCA (Foreign Account Tax Compliance Act) and IRS (Internal Revenue Service) compliance}
+        \resumeItem{Worked closely with cross-functional teams, learning from compliance officers and financial analysts to understand the effective integration of eKYC, FATCA, and IRS solutions into the banking framework}
+        \resumeItem{Gained hands-on experience in full-stack development using Java, Spring Boot, Angular, and REST APIs}
+      \resumeItemListEnd
 
-\experience{Software Developer Freelancer}{Upwork}{Mar 2020 – Present}
-\begin{itemize}[leftmargin=*,itemsep=0.05em]
-    \item Landed various jobs including End-to-end ML projects, Java, Android development
-    \item System Administrator (IT) remotely
-\end{itemize}
+    \resumeSubheading
+      {Software Developer Freelancer}{Mar 2020 -- Present}
+      {Upwork}{}
+      \resumeItemListStart
+        \resumeItem{Landed various jobs including End-to-end ML projects, Java, Android development}
+        \resumeItem{System Administrator (IT) remotely}
+      \resumeItemListEnd
 
-% Notable Projects
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
 \section{Notable Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{eKYC} $|$ \emph{Angular, Spring Boot}}{}
+          \resumeItemListStart
+            \resumeItem{KYC is a crucial practice in financial institutions to protect customers from fraud and losses, establish their identity, understand their activities, and assess money laundering risks to ensure legitimacy and security}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{FATCA/CRS Reporting System} $|$ \emph{Java 21, Spring Boot 3.3, Angular 18, REST APIs, Liquibase, MapStruct, Lombok}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a comprehensive FATCA/CRS reporting system for international tax compliance}
+            \resumeItem{Implemented automated data collection, validation, and XML document generation for multiple jurisdictions}
+            \resumeItem{Ensures compliance with OECD Common Reporting Standard and FATCA regulations, processing large volumes of financial data and generating accurate regulatory reports}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{IRS IDES Data Preparation System} $|$ \emph{Java 8, Spring Boot 2.5, Angular 18, XML Schema, Spring Security}}{}
+          \resumeItemListStart
+            \resumeItem{Developed an enterprise-level IRS IDES (International Data Exchange Service) data preparation system for automated generation of regulatory reports and XML document preparation}
+            \resumeItem{Implemented secure data transmission protocols, encryption mechanisms, and digital signing capabilities to ensure compliance with international tax reporting standards}
+            \resumeItem{Processes large volumes of financial data and generates accurate regulatory reports for multiple jurisdictions}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\project{eKYC}
-- KYC is a crucial practice in financial institutions to protect customers from fraud and losses, establish their identity, understand their activities, and assess money laundering risks to ensure legitimacy and security.\\
-\textbf{Tools:} Angular, Spring Boot
 
-\project{FATCA/CRS Reporting System}
-- Developed a comprehensive FATCA/CRS reporting system for international tax compliance. Implemented automated data collection, validation, and XML document generation for multiple jurisdictions. The system ensures compliance with OECD Common Reporting Standard and FATCA regulations, processing large volumes of financial data and generating accurate regulatory reports.\\
-\textbf{Tools:} \\Java 21, Spring Boot 3.3, Angular 18, REST APIs, Database Integration, Liquibase, MapStruct, Lombok, Spring Data JPA, Spring Validation
-
-\project{IRS IDES Data Preparation System}
-- Developed an enterprise-level IRS IDES (International Data Exchange Service) data preparation system for automated generation of regulatory reports and XML document preparation. Implemented secure data transmission protocols, encryption mechanisms, and digital signing capabilities to ensure compliance with international tax reporting standards. The system processes large volumes of financial data and generates accurate regulatory reports for multiple jurisdictions.\\
-\textbf{Tools:} \\Java 8, Spring Boot 2.5, Angular 18, XML Schema, REST APIs, Database Integration, Encryption, Digital Signing, Maven, WAR Deployment, Spring Security, Spring Session, Caffeine Cache, WebSocket\\
-
-% Education
+%-----------EDUCATION-----------
 \section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ITI in AI and Machine Learning}{Oct 2021 -- Aug 2022}
+      {Information Technology Institute (ITI), Alexandria, Egypt}{(AI-PRO) -- 9 Month Program}
+    \resumeSubheading
+      {BSc in Software Engineering}{Sep 2017 -- Jun 2021}
+      {Faculty of Computer Science, Kafrelsheikh University}{Very Good (GPA: 3.0)}
+  \resumeSubHeadingListEnd
 
-\education{ITI in AI and Machine Learning}{Information Technology Institute Alexandria, Egypt (ITI)}{Oct 2021 – Aug 2022} 
-\begin{itemize}[leftmargin=*,itemsep=0.05em]
-    \item  (AI-PRO) - 9 Month Program
-\end{itemize}
 
-\education{BSc in Software Engineering}{Faculty of Computer Science, Kafrelsheikh University}{Sep 2017 – Jun 2021}
-\begin{itemize}[leftmargin=*,itemsep=0.05em]
-    \item Very Good (GPA: 3.0)
-\end{itemize}
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Java 8/21, Python, JavaScript, TypeScript, SQL, C++} \\
+     \textbf{Frameworks \& Libraries}{: Spring Boot 2.5/3.3, Angular 18, React, Node.js, TensorFlow, PyTorch} \\
+     \textbf{Databases}{: MySQL, Oracle, SQL Server, PostgreSQL, MongoDB} \\
+     \textbf{Spring Ecosystem}{: Spring Data JPA, Spring Security, Spring Session, Spring Validation, Spring Actuator, Spring WebSocket} \\
+     \textbf{Tools and Technologies}{: Maven, Git, Docker, AWS, Linux, Power BI, Tableau, MapStruct, Lombok, Liquibase} \\
+     \textbf{AI/ML}{: PySpark, Web Scraping, Numpy, Sklearn, Pandas} \\
+     \textbf{Web Technologies}{: HTML, CSS, REST APIs, XML Schema, Encryption, Digital Signing}
+    }}
+ \end{itemize}
 
-% Languages
+
+%-----------LANGUAGES-----------
 \section{Languages}
-\begin{itemize}[leftmargin=*,itemsep=0.08em]
-    \item \textbf{Arabic} — Native/Bilingual
-    \item \textbf{English} — Proficient
-\end{itemize}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Arabic}{: Native/Bilingual} \\
+     \textbf{English}{: Proficient}
+    }}
+ \end{itemize}
 
 
+%-------------------------------------------
 \end{document}
