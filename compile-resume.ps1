@@ -26,5 +26,7 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-Write-Host "Done. Output PDF: $jobname.pdf"
+# Copy to fixed name so the latest PDF can be committed to the repo
+Copy-Item -Path "$jobname.pdf" -Destination "Ahmed_Osama_Resume.pdf" -Force
+Write-Host "Done. Output: $jobname.pdf (latest copy: Ahmed_Osama_Resume.pdf)"
 
