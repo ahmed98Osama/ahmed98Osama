@@ -40,10 +40,31 @@
 \raggedright%
 \setlength{\tabcolsep}{0in}
 
+%----------------------------------------------------------------------
+% SPACING CONFIGURATION (adjust here for global layout changes)
+%----------------------------------------------------------------------
+\newlength{\cvSpaceBeforeSection}   \setlength{\cvSpaceBeforeSection}{-11pt}   % space before section rule
+\newlength{\cvSpaceAfterSection}    \setlength{\cvSpaceAfterSection}{-10pt}   % space after section rule
+\newlength{\cvSpaceAfterHeading}    \setlength{\cvSpaceAfterHeading}{-2pt}    % after name/contact block
+\newlength{\cvSpaceAfterSummary}    \setlength{\cvSpaceAfterSummary}{-3pt}     % after Professional Summary
+\newlength{\cvSpaceAfterSubheading} \setlength{\cvSpaceAfterSubheading}{-9pt}  % after job title/company line
+\newlength{\cvSpaceAfterEduHeading} \setlength{\cvSpaceAfterEduHeading}{-7pt} % after education entry
+\newlength{\cvSpaceAfterSubSub}     \setlength{\cvSpaceAfterSubSub}{-7pt}     % after sub-subheading
+\newlength{\cvSpaceAfterProject}    \setlength{\cvSpaceAfterProject}{-3pt}    % after project name/tech line
+\newlength{\cvSpaceItem}            \setlength{\cvSpaceItem}{-2pt}           % after each bullet item
+\newlength{\cvSpaceBeforeItemList}  \setlength{\cvSpaceBeforeItemList}{-15pt} % before bullet list under job
+\newlength{\cvSpaceAfterItemList}   \setlength{\cvSpaceAfterItemList}{-7pt}    % after bullet list
+\newlength{\cvSpaceBeforeProject}   \setlength{\cvSpaceBeforeProject}{-7pt}   % before first project in job
+\newlength{\cvSpaceBetweenJobs}    \setlength{\cvSpaceBetweenJobs}{7pt}       % between experience entries
+\newlength{\cvSpaceSubItem}         \setlength{\cvSpaceSubItem}{-4pt}         % after sub-bullet
+\newlength{\cvSpaceSectionContent}  \setlength{\cvSpaceSectionContent}{1pt}   % after section title (Education, Skills, etc.)
+\newlength{\cvSpaceSubheadingItem}  \setlength{\cvSpaceSubheadingItem}{0pt}    % before experience/edu item
+\newlength{\cvSpaceEduItem}         \setlength{\cvSpaceEduItem}{-1pt}         % before education item
+
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-11pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule\vspace{-10pt}]
+\titleformat{\section}{%
+  \vspace{\cvSpaceBeforeSection}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{\cvSpaceAfterSection}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -52,71 +73,72 @@
 % Custom commands
 \newcounter{projectCounter}
 \newcommand{\resumeItem}[1]{%
-  \item {\small #1\vspace{-2pt}}%
+  \item {\small #1\vspace{\cvSpaceItem}}%
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{0pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} at \textbf{#3} & #2 \\
-      & \textit{\small #4} \\
-    \end{tabular*}\vspace{-9pt}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{\cvSpaceSubheadingItem}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} at \textbf{#3} & #2 \\
+    & \textit{\small #4} \\
+  \end{tabular*}\vspace{\cvSpaceAfterSubheading}%
 }
 
-\newcommand{\resumeEducationHeading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeEducationHeading}[4]{%
+  \vspace{\cvSpaceEduItem}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{\cvSpaceAfterEduHeading}%
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeSubSubheading}[2]{%
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{\cvSpaceAfterSubSub}%
 }
 
 \newcommand{\resumeProjectHeading}[3]{%
-    \stepcounter{projectCounter}%
-    \item[]
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small\textbf{\theprojectCounter.}~\textbf{#1} & #3 \\
-      \small\emph{#2} & \\
-    \end{tabular*}\vspace{-3pt}
+  \stepcounter{projectCounter}%
+  \item[]
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small\textbf{\theprojectCounter.}~\textbf{#1} & #3 \\
+    \small\emph{#2} & \\
+  \end{tabular*}\vspace{\cvSpaceAfterProject}%
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{\cvSpaceSubItem}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\vspace{-15pt}\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+\newcommand{\resumeItemListStart}{\vspace{\cvSpaceBeforeItemList}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{\cvSpaceAfterItemList}}
 \newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=0.15in, label={--}]}
-\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-7pt}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{\cvSpaceAfterItemList}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Spacing: edit the "SPACING CONFIGURATION" block above to tweak layout.
+%-------------------------------------------
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    {\Huge \scshape Ahmed Osama Ahmed Farouk} \\ \vspace{-2pt}
+    {\Huge \scshape Ahmed Osama Ahmed Farouk} \\ \vspace{\cvSpaceAfterHeading}
     \small Alexandria, Egypt $|$ \faPhone\ 01552512723 $|$ \faWhatsapp\ \href{https://wa.me/01271898926}{01271898926} $|$ \href{mailto:ahmedosamaf98@gmail.com}{\underline{ahmedosamaf98@gmail.com}} \\
     \href{https://linkedin.com/in/ahmed98osama}{\underline{linkedin.com/in/ahmed98osama}} $|$
     \href{https://github.com/ahmed98Osama}{\underline{github.com/ahmed98Osama}}
 \end{center}
-\vspace{-2pt}
+\vspace{\cvSpaceAfterHeading}
 
 %-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
   {\small Backend / full-stack software engineer with strong experience in Java, Spring Boot, and Angular. Focused on designing secure, scalable, and testable services, automating manual workflows, and collaborating closely with stakeholders. Open to remote and hybrid roles in Egypt, and relocation.}
-\vspace{-3pt}
+\vspace{\cvSpaceAfterSummary}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
@@ -130,7 +152,7 @@
       \resumeItemListStart%
         \resumeItem{Backend and full-stack development for compliance and onboarding platforms serving \textbf{+5 financial institutions}}
         \resumeItem{Key projects: digital onboarding (eKYC), tax reporting (FATCA/CRS, IRS IDES), and AML workflows}
-        \vspace{-7pt}%
+        \vspace{\cvSpaceBeforeProject}%
         \resumeProjectHeading%
           {eKYC}{Angular 18, TypeScript, PrimeNG}{}
           \resumeProjectItemListStart%
@@ -151,7 +173,7 @@
           \resumeProjectItemListEnd
       \resumeItemListEnd
 
-    \vspace{7pt}%
+    \vspace{\cvSpaceBetweenJobs}%
     \resumeSubheading%
       {Software Developer Freelancer}{Mar 2020--Present}
       {Upwork / Outlier}{}
@@ -166,7 +188,7 @@
 
 %-----------EDUCATION-----------
 \section{Education}
-\vspace{1pt}
+\vspace{\cvSpaceSectionContent}
   \resumeSubHeadingListStart%
     \resumeEducationHeading%
       {ITI in AI and Machine Learning}{Oct 2021--Aug 2022}
@@ -179,7 +201,7 @@
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\vspace{1pt}
+\vspace{\cvSpaceSectionContent}
  \begin{itemize}[leftmargin=0.15in, label={}]
    \item {\small
     \textbf{Programming Languages}{: Java 8/21, Python, JavaScript, TypeScript, SQL} \\

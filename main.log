@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.2.8)  18 FEB 2026 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.2.8)  18 FEB 2026 22:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -289,8 +289,25 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (C:\Program Files\MiKTeX\tex/generic/iftex\ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (C:\Users\AhmedOsama\AppData\Roaming\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-generic.tex) (C:\Users\AhmedOsama\AppData\Roaming\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-pdftex.tex)) (C:\Program Files\MiKTeX\tex/generic/pdftex\glyphtounicode.tex)
+\cvSpaceBeforeSection=\skip71
+\cvSpaceAfterSection=\skip72
+\cvSpaceAfterHeading=\skip73
+\cvSpaceAfterSummary=\skip74
+\cvSpaceAfterSubheading=\skip75
+\cvSpaceAfterEduHeading=\skip76
+\cvSpaceAfterSubSub=\skip77
+\cvSpaceAfterProject=\skip78
+\cvSpaceItem=\skip79
+\cvSpaceBeforeItemList=\skip80
+\cvSpaceAfterItemList=\skip81
+\cvSpaceBeforeProject=\skip82
+\cvSpaceBetweenJobs=\skip83
+\cvSpaceSubItem=\skip84
+\cvSpaceSectionContent=\skip85
+\cvSpaceSubheadingItem=\skip86
+\cvSpaceEduItem=\skip87
 \c@projectCounter=\count279
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 105.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 127.
  (C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -300,24 +317,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count281
@@ -332,64 +349,64 @@ LaTeX Font Info:    ... okay on input line 105.
 \makeMPintoPDFobject=\count286
 \everyMPtoPDFconversion=\toks27
 )
-Package hyperref Info: Link coloring OFF on input line 105.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 110.
+Package hyperref Info: Link coloring OFF on input line 127.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 132.
  (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 110.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 132.
  (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 110.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 132.
  (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 110.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 132.
  (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 110.
+(Font)              <10> on input line 132.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 110.
+(Font)              <7> on input line 132.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 110.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 110.
+(Font)              <5> on input line 132.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 132.
  (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+fontawesometwo on input line 110.
+LaTeX Font Info:    Trying to load font information for U+fontawesometwo on input line 132.
  (C:\Users\AhmedOsama\AppData\Roaming\MiKTeX\tex/latex/fontawesome\ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
-LaTeX Font Info:    Trying to load font information for U+fontawesomeone on input line 110.
+LaTeX Font Info:    Trying to load font information for U+fontawesomeone on input line 132.
  (C:\Users\AhmedOsama\AppData\Roaming\MiKTeX\tex/latex/fontawesome\ufontawesomeone.fd
 File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 129.
+(Font)              <12> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 129.
+(Font)              <8> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 129.
+(Font)              <6> on input line 151.
 
-Overfull \hbox (18.23639pt too wide) in paragraph at lines 135--136
+Overfull \hbox (18.23639pt too wide) in paragraph at lines 157--158
 []  
  []
 
 
-Overfull \hbox (18.23639pt too wide) in paragraph at lines 141--142
+Overfull \hbox (18.23639pt too wide) in paragraph at lines 163--164
 []  
  []
 
 
-Overfull \hbox (18.23639pt too wide) in paragraph at lines 147--148
+Overfull \hbox (18.23639pt too wide) in paragraph at lines 169--170
 []  
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 173.
+(Font)              <10.95> on input line 195.
 [1
 
 {C:/Users/AhmedOsama/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/AhmedOsama/AppData/Roaming/MiKTeX/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{C:/Users/AhmedOsama/AppData/Roaming/MiKTeX/fonts/enc/dvips/fontawesome/fontawesomeone.enc}] (main.aux)
@@ -399,15 +416,15 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12992 strings out of 474485
- 203261 string characters out of 5753535
- 1953542 words of memory out of 5000000
- 35080 multiletter control sequences out of 15000+600000
+ 13009 strings out of 474485
+ 203579 string characters out of 5753535
+ 1952542 words of memory out of 5000000
+ 35097 multiletter control sequences out of 15000+600000
  631071 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,404b,455s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/AhmedOsama/AppData/Roaming/MiKTeX/fonts/type1/public/fontawesome/FontAwesome.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb>
-Output written on main.pdf (1 page, 202536 bytes).
+Output written on main.pdf (1 page, 202542 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
