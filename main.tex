@@ -1,6 +1,8 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -40,8 +42,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule\vspace{-9pt}]
+  \vspace{-11pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-10pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -54,6 +56,14 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} at \textbf{#3} & #2 \\
+      & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeEducationHeading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -68,12 +78,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{%
+\newcommand{\resumeProjectHeading}[3]{%
     \stepcounter{projectCounter}%
     \item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small\textbf{\theprojectCounter.}~#1 & #2 \\
-    \end{tabular*}\vspace{-2pt}
+      \small\textbf{\theprojectCounter.}~\textbf{#1} & #3 \\
+      \small\emph{#2} & \\
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -82,10 +93,10 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListStart}{\vspace{-15pt}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
 \newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=0.15in, label={--}]}
-\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-7pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,16 +106,17 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Ahmed Osama Ahmed Farouk} \\ \vspace{1pt}
+    {\Huge \scshape Ahmed Osama Ahmed Farouk} \\ \vspace{-2pt}
     \small Alexandria, Egypt $|$ \faPhone\ 01552512723 $|$ \faWhatsapp\ \href{https://wa.me/01271898926}{01271898926} $|$ \href{mailto:ahmedosamaf98@gmail.com}{\underline{ahmedosamaf98@gmail.com}} \\
     \href{https://linkedin.com/in/ahmed98osama}{\underline{linkedin.com/in/ahmed98osama}} $|$
     \href{https://github.com/ahmed98Osama}{\underline{github.com/ahmed98Osama}}
 \end{center}
-
+\vspace{-2pt}
 
 %-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
   {\small Backend / full-stack software engineer with strong experience in Java, Spring Boot, and Angular. Focused on designing secure, scalable, and testable services, automating manual workflows, and collaborating closely with stakeholders. Open to remote and hybrid roles in Egypt, and relocation.}
+\vspace{-3pt}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
@@ -116,35 +128,36 @@
       {Software Engineer}{2023--Present}
       {Data Gear}{}
       \resumeItemListStart%
-        \resumeItem{Backend and full-stack development for compliance and onboarding platforms serving +5 financial institutions}
+        \resumeItem{Backend and full-stack development for compliance and onboarding platforms serving \textbf{+5 financial institutions}}
         \resumeItem{Key projects: digital onboarding (eKYC), tax reporting (FATCA/CRS, IRS IDES), and AML workflows}
+        \vspace{-7pt}%
         \resumeProjectHeading%
-          {\textbf{eKYC} $|$ \emph{Angular 18, TypeScript, PrimeNG}}{}
+          {eKYC}{Angular 18, TypeScript, PrimeNG}{}
           \resumeProjectItemListStart%
             \resumeItem{Contributed to digital onboarding platform with automated ID verification, risk scoring, and PEP/sanctions screening via OCR/ID provider integrations}
             \resumeItem{Developed backend services and Angular UI screens, reducing manual review time and eliminating handwritten paperwork}
           \resumeProjectItemListEnd
         \resumeProjectHeading%
-          {\textbf{FATCA/CRS Reporting} $|$ \emph{Java 21, Spring Boot 3.4, Spring Data JPA, Liquibase, ActiveMQ (JMS), Lombok}}{}
+          {FATCA/CRS Reporting}{Java 21, Spring Boot 3.4, Spring Data JPA, Liquibase, ActiveMQ (JMS), Lombok}{}
           \resumeProjectItemListStart%
             \resumeItem{Architected database-agnostic query builder using Spring Boot Criteria Builder API for MySQL, Oracle, SQL Server, and PostgreSQL}
-            \resumeItem{Designed automated data collection, validation, and XML generation pipeline processing millions of records, reducing report time from 2 days to under 2 hours}
+            \resumeItem{Designed automated data collection, validation, and XML generation pipeline processing \textbf{millions of records}, reducing report generation time from \textbf{2 days down to under 2 hours}}
           \resumeProjectItemListEnd
         \resumeProjectHeading%
-          {\textbf{IRS IDES Data Preparation} $|$ \emph{Java 8, Spring Boot 2.5, Spring Data JPA, Spring WebSocket, OpenCSV, Jackson}}{}
+          {IRS IDES Data Preparation}{Java 8, Spring Boot 2.5, Spring Data JPA, Spring WebSocket, OpenCSV, Jackson}{}
           \resumeProjectItemListStart%
             \resumeItem{Migrated legacy Java desktop application to web-based Spring Boot/Angular platform, enabling remote access and on-premises deployment}
             \resumeItem{Implemented data ingestion from CSV, Excel, and database sources with validation, account grouping, currency conversion, and XML schema compliance, reducing IRS errors}
           \resumeProjectItemListEnd
       \resumeItemListEnd
 
-    \vspace{6pt}%
+    \vspace{7pt}%
     \resumeSubheading%
       {Software Developer Freelancer}{Mar 2020--Present}
       {Upwork / Outlier}{}
       \resumeItemListStart%
-        \resumeItem{Delivered +17 projects for international clients across Java/Spring, TypeScript/JavaScript, Python, C++, and ML/data engineering}
-        \resumeItem{Fine-tuned AI models for automated bug analysis and PR generation; supervised code quality and merge decisions for 4--5 months on production codebase}
+        \resumeItem{Delivered \textbf{+17 projects} for international clients across Java/Spring, TypeScript/JavaScript, Python, C++, and ML/data engineering}
+        \resumeItem{Fine-tuned AI models for automated bug analysis and PR generation; supervised code quality and merge decisions for \textbf{4--5 months} on production codebase}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd%
@@ -153,12 +166,12 @@
 
 %-----------EDUCATION-----------
 \section{Education}
-\vspace{4pt}
+\vspace{1pt}
   \resumeSubHeadingListStart%
-    \resumeSubheading%
+    \resumeEducationHeading%
       {ITI in AI and Machine Learning}{Oct 2021--Aug 2022}
       {Information Technology Institute (ITI), Alexandria, Egypt}{AI-PRO Program}
-    \resumeSubheading%
+    \resumeEducationHeading%
       {BSc in Software Engineering}{Sep 2017--Jun 2021}
       {Faculty of Computer Science, Kafrelsheikh University}{Very Good (GPA: 3.0\@)}
   \resumeSubHeadingListEnd%
@@ -166,7 +179,7 @@
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\vspace{4pt}
+\vspace{1pt}
  \begin{itemize}[leftmargin=0.15in, label={}]
    \item {\small
     \textbf{Programming Languages}{: Java 8/21, Python, JavaScript, TypeScript, SQL} \\
