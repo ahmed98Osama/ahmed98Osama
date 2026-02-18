@@ -1,6 +1,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -49,9 +50,7 @@
 % Custom commands
 \newcounter{projectCounter}
 \newcommand{\resumeItem}[1]{%
-  \item\small{%
-    #1\vspace{-2pt}%
-  }%
+  \item {\small #1\vspace{-2pt}}%
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -85,7 +84,7 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
-\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=0.15in, label={--}]}
 \newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
@@ -105,7 +104,7 @@
 
 %-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
-  \small{Backend / full-stack software engineer with strong experience in Java, Spring Boot, and Angular. Focused on designing secure, scalable, and testable services, automating manual workflows, and collaborating closely with stakeholders. Open to remote and hybrid roles in Egypt, and relocation.}
+  {\small Backend / full-stack software engineer with strong experience in Java, Spring Boot, and Angular. Focused on designing secure, scalable, and testable services, automating manual workflows, and collaborating closely with stakeholders. Open to remote and hybrid roles in Egypt, and relocation.}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
@@ -169,24 +168,24 @@
 \section{Technical Skills}
 \vspace{4pt}
  \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: Java 8/21, Python, JavaScript, TypeScript, SQL} \\
-     \textbf{Backend \& APIs}{: Spring Boot 2.5/3.3, Spring Data JPA, Spring Security, Spring Batch, REST APIs, Lombok} \\
-     \textbf{Frontend \& UI}{: Angular 18, PrimeNG, NgRx, HTML, CSS} \\
-     \textbf{Data Stores \& Messaging}{: Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, ActiveMQ (JMS)} \\
-     \textbf{DevOps \& Platform}{: Docker, Maven, Git, Linux, Shell scripting, AWS, Liquibase, OpenAPI/Swagger} \\
-     \textbf{Testing \& Quality}{: JUnit, Spring Boot Test, REST Assured, Postman, Bruno} \\
-     \textbf{AI/ML \& Data}{: Python (Pandas, Numpy, Sklearn), Jupyter Notebook}
-    }}
+   \item {\small
+    \textbf{Programming Languages}{: Java 8/21, Python, JavaScript, TypeScript, SQL} \\
+    \textbf{Backend \& APIs}{: Spring Boot 2.5/3.3, Spring Data JPA, Spring Security, Spring Batch, REST APIs, Lombok} \\
+    \textbf{Frontend \& UI}{: Angular 18, PrimeNG, NgRx, HTML, CSS} \\
+    \textbf{Data Stores \& Messaging}{: Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, ActiveMQ (JMS)} \\
+    \textbf{DevOps \& Platform}{: Docker, Maven, Git, Linux, Shell scripting, AWS, Liquibase, OpenAPI/Swagger} \\
+    \textbf{Testing \& Quality}{: JUnit, Spring Boot Test, REST Assured, Postman, Bruno} \\
+    \textbf{AI/ML \& Data}{: Python (Pandas, Numpy, Sklearn), Jupyter Notebook}
+   }
  \end{itemize}
 
 
 %-----------LANGUAGES-----------
 \section{Languages}
  \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Arabic}{: Native} $|$ \textbf{English}{: Professional}
-    }}
+   \item {\small
+    \textbf{Arabic}{: Native} $|$ \textbf{English}{: Professional}
+   }
  \end{itemize}
 
 
