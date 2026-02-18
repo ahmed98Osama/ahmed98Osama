@@ -1,16 +1,17 @@
 <h1 align="center"> Hi <img src="https://github.com/mitul3737/mitul3737/blob/main/Wave.gif" width="55" height="55">, I am Ahmed Osama </h1>
 
-<h3 align="center"> A passionate Software Engineer interested in Software Develpoment , AI and Data Science😎 </h3>
-<h3 align="center"> Data Analyst | Machine Learning Enthusiast | Androider ☺  </h3> 
+<h3 align="center"> Backend / Full-Stack Software Engineer (Java, Spring Boot, Angular) </h3>
+<h3 align="center"> AI & Data Enthusiast | ITI AI/ML Graduate </h3> 
 <h3 align="center"> <img  align="center" src="https://komarev.com/ghpvc/?username=ahmed98Osama&label=Profile%20views&color=0e75b6&style=flat" alt="ahmed98Osama" />  </h3>
 
 
 ### About Me:
 
-- :school: I am a `Computer Science Graduate`, department of `Software Engineering` from Faculty of Computers & Information at Kafr El-Shiekh University.
-- 🔭 I’m an `ITI Graduate` of 9 months `Artificial Intelligence Track`.
-- 💻 I’m currently `Open For Work`.  This is my [Resume](https://drive.google.com/file/d/1hHz0chY7sxq3j_xmidSQf8VY-2JdhYf9/view?usp=drive_web).
-- ✨ Always enthusiast for `Innovation and creating new things`.
+- :school: I am a `Computer Science Graduate`, department of `Software Engineering` from Faculty of Computer Science at Kafrelsheikh University (Egypt).
+- 🔭 I’m an `ITI Graduate` of the 9‑month `Artificial Intelligence & Machine Learning` track (Alexandria branch).
+- 💻 I’m currently `Open to New Opportunities` (backend / full‑stack roles; remote, hybrid in Egypt, or relocation). View my latest [Resume](https://github.com/ahmed98Osama/ahmed98Osama/raw/main/Ahmed_Osama_Resume.pdf).
+- 🧩 **Current focus**: Backend / full‑stack engineer building compliance, onboarding, and reporting platforms, plus freelance work on international projects.
+- ✨ Always enthusiast for `Innovation and creating new things`, and for building secure, scalable services and automating manual workflows.
 
 
 
