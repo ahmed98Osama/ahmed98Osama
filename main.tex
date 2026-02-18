@@ -72,10 +72,10 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+    \item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{6pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -86,6 +86,8 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,11 +116,29 @@
       {Software Engineer}{2023 -- Present}
       {Data Gear}{}
       \resumeItemListStart
-        \resumeItem{Developed and maintained eKYC onboarding, AML monitoring, and FATCA/CRS/IRS reporting platforms for +5 financial institutions}
-        \resumeItem{Automated data ingestion, validation, and XML reporting pipelines that process millions of records and cut report preparation from 2 days to under 2 hours}
-        \resumeItem{Contributed to digital onboarding (ID verification, risk scoring, PEP/sanctions screening) and modernized a legacy desktop reporting solution to a Spring Boot/Angular web application}
+        \resumeItem{Backend and full-stack development for compliance and onboarding platforms serving +5 financial institutions}
+        \resumeItem{Key projects: digital onboarding (eKYC), tax reporting (FATCA/CRS, IRS IDES), and AML workflows}
+        \resumeProjectHeading
+          {\textbf{eKYC} $|$ \emph{Angular 18, TypeScript, PrimeNG}}{}
+          \resumeProjectItemListStart
+            \resumeItem{Contributed to digital onboarding platform with automated ID verification, risk scoring, and PEP/sanctions screening via OCR/ID provider integrations}
+            \resumeItem{Developed backend services and Angular UI screens, reducing manual review time and eliminating handwritten paperwork}
+          \resumeProjectItemListEnd
+        \resumeProjectHeading
+          {\textbf{FATCA/CRS Reporting} $|$ \emph{Java 21, Spring Boot 3.4, Spring Data JPA, Liquibase, ActiveMQ (JMS), Lombok}}{}
+          \resumeProjectItemListStart
+            \resumeItem{Architected database-agnostic query builder using Spring Boot Criteria Builder API for MySQL, Oracle, SQL Server, and PostgreSQL}
+            \resumeItem{Designed automated data collection, validation, and XML generation pipeline processing millions of records, reducing report time from 2 days to under 2 hours}
+          \resumeProjectItemListEnd
+        \resumeProjectHeading
+          {\textbf{IRS IDES Data Preparation} $|$ \emph{Java 8, Spring Boot 2.5, Spring Data JPA, Spring WebSocket, OpenCSV, Jackson}}{}
+          \resumeProjectItemListStart
+            \resumeItem{Migrated legacy Java desktop application to web-based Spring Boot/Angular platform, enabling remote access and on-premises deployment}
+            \resumeItem{Implemented data ingestion from CSV, Excel, and database sources with validation, account grouping, currency conversion, and XML schema compliance, reducing IRS errors}
+          \resumeProjectItemListEnd
       \resumeItemListEnd
 
+    \vspace{6pt}
     \resumeSubheading
       {Software Developer Freelancer}{Mar 2020 -- Present}
       {Upwork / Outlier}{}
@@ -128,30 +148,6 @@
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------
-\section{Notable Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{eKYC} $|$ \emph{Angular 18, TypeScript, PrimeNG}}{}
-          \resumeItemListStart
-            \resumeItem{Contributed to digital onboarding platform with automated ID verification, risk scoring, and PEP/sanctions screening via OCR/ID provider integrations}
-            \resumeItem{Developed backend services and Angular UI screens, reducing manual review time and eliminating handwritten paperwork}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{FATCA/CRS Reporting} $|$ \emph{Java 21, Spring Boot 3.4, Spring Data JPA, Liquibase, ActiveMQ (JMS), Lombok}}{}
-          \resumeItemListStart
-            \resumeItem{Architected database-agnostic query builder using Spring Boot Criteria Builder API for MySQL, Oracle, SQL Server, and PostgreSQL}
-            \resumeItem{Designed automated data collection, validation, and XML generation pipeline processing millions of records, reducing report time from 2 days to under 2 hours}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{IRS IDES Data Preparation} $|$ \emph{Java 8, Spring Boot 2.5, Spring Data JPA, Spring WebSocket, OpenCSV, Jackson}}{}
-          \resumeItemListStart
-            \resumeItem{Migrated legacy Java desktop application to web-based Spring Boot/Angular platform, enabling remote access and on-premises deployment}
-            \resumeItem{Implemented data ingestion from CSV, Excel, and database sources with validation, account grouping, currency conversion, and XML schema compliance, reducing IRS errors}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
 
 
 %-----------EDUCATION-----------
